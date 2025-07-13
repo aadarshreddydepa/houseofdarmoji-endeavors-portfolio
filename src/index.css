@@ -41,11 +41,49 @@ All colors MUST be HSL.
     --brand-purple: 256 32% 33%;
     --brand-light: 221 18% 91%;
     --brand-accent: 256 35% 55%;
-    --brand-gradient: linear-gradient(135deg, hsl(221 18% 91%), hsl(256 35% 55%));
-    
+    --brand-gradient: linear-gradient(
+      135deg,
+      hsl(221 18% 91%),
+      hsl(256 35% 55%)
+    );
+
+    /* Enhanced gradients for sleek design */
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(256 35% 55%),
+      hsl(256 45% 65%)
+    );
+    --gradient-secondary: linear-gradient(
+      135deg,
+      hsl(256 25% 45%),
+      hsl(256 35% 55%)
+    );
+    --gradient-glass: linear-gradient(
+      135deg,
+      hsl(221 18% 91% / 0.8),
+      hsl(256 35% 55% / 0.1)
+    );
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(221 18% 91% / 0.95),
+      hsl(256 35% 55% / 0.05)
+    );
+
+    /* Enhanced shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(256 32% 33% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(256 32% 33% / 0.1),
+      0 2px 4px -1px hsl(256 32% 33% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(256 32% 33% / 0.1),
+      0 4px 6px -2px hsl(256 32% 33% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(256 32% 33% / 0.1),
+      0 10px 10px -5px hsl(256 32% 33% / 0.04);
+    --shadow-glow: 0 0 20px hsl(256 35% 55% / 0.3);
+    --shadow-glow-lg: 0 0 40px hsl(256 35% 55% / 0.2);
+
     /* Animations and effects */
     --glow-purple: 0 0 30px hsl(256 35% 55% / 0.3);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --radius: 0.5rem;
 
@@ -112,5 +150,99 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
+}
+
+@layer components {
+  .glass-effect {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(256 35% 55% / 0.1);
+  }
+
+  .glass-card {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(256 35% 55% / 0.1);
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition-smooth);
+  }
+
+  .glass-card:hover {
+    border-color: hsl(256 35% 55% / 0.3);
+    box-shadow: var(--shadow-xl), var(--shadow-glow);
+    transform: translateY(-2px);
+  }
+
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-border {
+    background: var(--gradient-primary);
+    padding: 1px;
+    border-radius: var(--radius);
+  }
+
+  .gradient-border > * {
+    background: hsl(var(--background));
+    border-radius: calc(var(--radius) - 1px);
+  }
+
+  .scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--gradient-primary);
+    z-index: 9999;
+    transition: width 0.1s ease;
+  }
+
+  .floating-element {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .floating-element:nth-child(2) {
+    animation-delay: -2s;
+  }
+
+  .floating-element:nth-child(3) {
+    animation-delay: -4s;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    hsl(256 35% 55% / 0.1),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
 }
