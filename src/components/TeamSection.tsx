@@ -107,7 +107,7 @@ const TeamSection = () => {
                 </div>
 
                 <h3 className="text-2xl font-bold mb-2 group-hover:gradient-text transition-all duration-300">
-                  Partner in Innovation
+                  Aadarsh Reddy Depa
                 </h3>
                 <p className="text-accent font-semibold mb-4">
                   Co-Founder & Tech Enthusiast
@@ -115,7 +115,7 @@ const TeamSection = () => {
 
                 <div className="flex flex-wrap gap-2 justify-center mb-6">
                   <Badge className="bg-accent/20 text-accent border-accent/30 hover:bg-accent/30 transition-colors">
-                    CSE Final Year
+                    CSE(AI&ML) Final Year
                   </Badge>
                   <Badge className="bg-accent/20 text-accent border-accent/30 hover:bg-accent/30 transition-colors">
                     Tech Savvy
