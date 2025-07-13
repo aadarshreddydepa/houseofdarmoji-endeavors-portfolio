@@ -8,24 +8,24 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Brand colors based on houseofdarmoji logo */
-    --background: 256 32% 33%; /* #463b63 */
-    --foreground: 221 18% 91%; /* #E6E9EE */
+    /* Brand colors based on houseofdarmoji logo - corrected */
+    --background: 221 18% 91%; /* #E6E9EE */
+    --foreground: 256 32% 33%; /* #463b63 */
 
-    --card: 256 32% 33%;
-    --card-foreground: 221 18% 91%;
+    --card: 221 18% 91%;
+    --card-foreground: 256 32% 33%;
 
-    --popover: 256 32% 33%;
-    --popover-foreground: 221 18% 91%;
+    --popover: 221 18% 91%;
+    --popover-foreground: 256 32% 33%;
 
-    --primary: 256 25% 45%; /* Lighter purple for primary actions */
+    --primary: 256 35% 55%; /* Bright purple for primary actions */
     --primary-foreground: 221 18% 91%;
 
-    --secondary: 256 20% 25%; /* Darker purple for secondary */
-    --secondary-foreground: 221 18% 91%;
+    --secondary: 221 12% 75%; /* Lighter gray for secondary */
+    --secondary-foreground: 256 32% 33%;
 
-    --muted: 256 25% 20%; /* Very dark purple */
-    --muted-foreground: 221 12% 75%; /* Slightly muted text */
+    --muted: 221 12% 85%; /* Light gray */
+    --muted-foreground: 256 20% 45%; /* Medium purple for muted text */
 
     --accent: 256 35% 55%; /* Bright accent purple */
     --accent-foreground: 221 18% 91%;
@@ -33,15 +33,15 @@ All colors MUST be HSL.
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 221 18% 91%;
 
-    --border: 256 20% 45%; /* Purple border */
-    --input: 256 25% 35%; /* Slightly lighter input background */
+    --border: 256 20% 75%; /* Light purple border */
+    --input: 221 12% 85%; /* Light input background */
     --ring: 256 35% 55%; /* Accent purple for focus rings */
 
     /* Custom brand variables */
     --brand-purple: 256 32% 33%;
     --brand-light: 221 18% 91%;
     --brand-accent: 256 35% 55%;
-    --brand-gradient: linear-gradient(135deg, hsl(256 32% 33%), hsl(256 35% 55%));
+    --brand-gradient: linear-gradient(135deg, hsl(221 18% 91%), hsl(256 35% 55%));
     
     /* Animations and effects */
     --glow-purple: 0 0 30px hsl(256 35% 55% / 0.3);
