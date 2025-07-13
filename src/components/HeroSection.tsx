@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Rocket, Users, Sparkles } from "lucide-react";
+import { ArrowRight, Rocket, Users } from "lucide-react";
 
 const HeroSection = () => {
   // Scroll to a section by id
@@ -11,16 +11,10 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-24 md:pt-0">
       {/* Enhanced background with multiple layers */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-accent/5"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(256_35%_55%_0.1),transparent_50%)]"></div>
-
-      {/* Floating decorative elements (removed left bubble) */}
-      {/* <div className="absolute top-20 left-10 w-20 h-20 border border-accent/20 rounded-full floating-element opacity-60"></div> */}
-      <div className="absolute bottom-20 right-10 w-16 h-16 border border-accent/20 rounded-full floating-element opacity-60"></div>
-      <div className="absolute top-1/3 right-20 w-12 h-12 border border-accent/15 rounded-full floating-element opacity-40"></div>
-      <div className="absolute bottom-1/3 left-20 w-8 h-8 border border-accent/15 rounded-full floating-element opacity-40"></div>
 
       {/* Animated grid pattern */}
       <div className="absolute inset-0 opacity-[0.02]">
@@ -105,16 +99,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Enhanced decorative elements with better positioning */}
-      <div className="absolute top-1/4 left-1/4 w-32 h-32 border border-accent/10 rounded-full floating-element opacity-30"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-24 h-24 border border-accent/10 rounded-full floating-element opacity-30"></div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-accent/30 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-accent/50 rounded-full mt-2 animate-pulse"></div>
-        </div>
-      </div>
+      {/* Removed scroll indicator mouse symbol animation */}
     </section>
   );
 };

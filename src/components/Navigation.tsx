@@ -35,21 +35,19 @@ const Navigation = () => {
       />
 
       <nav className="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-accent/20">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-2 md:px-6">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div
               className="flex items-center gap-3 group cursor-pointer"
               onClick={() => scrollToSection("hero")}
             >
-              <div className="relative">
-                <img
-                  src="/lovable-uploads/4c8e65b3-ad9d-45d2-a2f0-cf330061a3aa.png"
-                  alt="House of Darmoji"
-                  className="w-8 h-8 transition-transform duration-300 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 rounded-full bg-accent/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
+              <img
+                src="/lovable-uploads/4c8e65b3-ad9d-45d2-a2f0-cf330061a3aa.png"
+                alt="House of Darmoji"
+                className="w-8 h-8 md:w-10 md:h-10 rounded-full object-cover bg-transparent"
+                style={{ display: "block" }}
+              />
               <span className="text-xl font-bold text-foreground group-hover:gradient-text transition-all duration-300">
                 HouseofDarmoji
               </span>
