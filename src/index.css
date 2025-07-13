@@ -8,33 +8,44 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Brand colors based on houseofdarmoji logo */
+    --background: 256 32% 33%; /* #463b63 */
+    --foreground: 221 18% 91%; /* #E6E9EE */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 256 32% 33%;
+    --card-foreground: 221 18% 91%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 256 32% 33%;
+    --popover-foreground: 221 18% 91%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 256 25% 45%; /* Lighter purple for primary actions */
+    --primary-foreground: 221 18% 91%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 256 20% 25%; /* Darker purple for secondary */
+    --secondary-foreground: 221 18% 91%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 256 25% 20%; /* Very dark purple */
+    --muted-foreground: 221 12% 75%; /* Slightly muted text */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 256 35% 55%; /* Bright accent purple */
+    --accent-foreground: 221 18% 91%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 221 18% 91%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 256 20% 45%; /* Purple border */
+    --input: 256 25% 35%; /* Slightly lighter input background */
+    --ring: 256 35% 55%; /* Accent purple for focus rings */
+
+    /* Custom brand variables */
+    --brand-purple: 256 32% 33%;
+    --brand-light: 221 18% 91%;
+    --brand-accent: 256 35% 55%;
+    --brand-gradient: linear-gradient(135deg, hsl(256 32% 33%), hsl(256 35% 55%));
+    
+    /* Animations and effects */
+    --glow-purple: 0 0 30px hsl(256 35% 55% / 0.3);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --radius: 0.5rem;
 
