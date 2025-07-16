@@ -40,7 +40,7 @@ const Index = () => {
           <div className="flex items-center justify-center gap-3 mb-6">
             <div className="relative">
               <img
-                src="/lovable-uploads/4c8e65b3-ad9d-45d2-a2f0-cf330061a3aa.png"
+                src="/uploads/4c8e65b3-ad9d-45d2-a2f0-cf330061a3aa.png"
                 alt="House of Darmoji"
                 className="relative w-8 h-8 rounded-full object-cover"
               />

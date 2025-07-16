@@ -43,7 +43,7 @@ const Navigation = () => {
               onClick={() => scrollToSection("hero")}
             >
               <img
-                src="/lovable-uploads/4c8e65b3-ad9d-45d2-a2f0-cf330061a3aa.png"
+                src="/uploads/4c8e65b3-ad9d-45d2-a2f0-cf330061a3aa.png"
                 alt="House of Darmoji"
                 className="w-8 h-8 md:w-10 md:h-10 rounded-full object-cover bg-transparent"
                 style={{ display: "block" }}
